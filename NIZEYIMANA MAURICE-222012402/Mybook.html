@@ -1,0 +1,272 @@
+<html>
+<head>
+	<title>MyBook</title>
+</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<body bgcolor="sky blue">
+    <p>
+    	<center>
+    	<ul style="list-style-type: none;  padding: 0;">
+        <li style="display: inline; background-color:pink; margin-right: 10px"><a href="./home.html"
+            style="padding: 10px;color: white;background-color: darkred;text-decoration: none;margin-right: 15px;">HOME</a></li>
+        <li style="display: inline; background-color:pink; margin-right: 10px"><a href="./about.html"
+            style="padding: 10px;color: white;background-color: darkred;text-decoration: none;margin-right: 15px;">ABOUT</a></li>
+        <li style="display: inline; background-color:pink; margin-right: 10px"><a href="./contact.html"
+            style="padding: 10px;color: white;background-color: darkred;text-decoration: none;margin-right: 15px;">CONTACT</a></li>
+        <li style="display: inline; background-color:pink; margin-right: 10px"><a href="./services.html"
+            style="padding: 10px;color: white;background-color: darkred;text-decoration: none;margin-right: 15px;">SERVICES</a></li>
+        <li style="display: inline; background-color:pink; margin-right: 10px"><a href="./form.html"
+            style="padding: 10px;color: white;background-color: darkred;text-decoration: none;margin-right: 15px;">FORM</a></li>
+        <li style="display: inline; background-color:pink; margin-right: 10px"><a href="./table.html"
+            style="padding: 10px;color: white;background-color: darkred;text-decoration: none;margin-right: 15px;">TABLE</a></li>
+        <li style="display: inline; background-color:pink; margin-right: 10px"><a href="./Mybook.html"
+            style="padding: 10px;color: white;background-color: darkred;text-decoration: none;margin-right: 15px;">MYBOOK</a></li>
+    </ul></center>
+
+    <h1>DATABASE AND JAVA LABOR MANAGEMENT SYSTEM</h1>
+
+	<ol><h2><u><li>DATABASE</li></u></h2>
+
+        <h2>Introduction</h2>
+
+        <p>The database of a labor management system typically includes comprehensive information about employees, their schedules, attendance records, payroll details, and possibly performance evaluations. It may also store data on available shifts, job roles, and organizational structures. Additionally, it could include historical data for analysis and forecasting purposes. The database structure is designed to efficiently manage and retrieve this information to facilitate workforce management tasks such as scheduling, payroll processing, and performance tracking.</p>
+
+		<ul type="square"><h3><u><i><li>Tables</li></i></u></h3>
+    
+	     <li><b>Attendance Table</b></li>
+
+			  <p>Attendance Table:This entity tracks the presence or absence of employees during scheduled work hours. It typically includes timestamps for when an employee clocks in and out, as well as any breaks taken during the workday. Recording attendance accurately is vital for calculating payroll, monitoring employee punctuality, and ensuring compliance with labor laws and company policies.</p></br>
+
+			<li><b>Benefit Table</b></li>
+
+				<p>Benefit Table:The benefit entity encompasses various perks and privileges provided to employees by their employer. This can include health insurance, retirement plans, vacation days, sick leave, and other forms of compensation beyond the base salary. Managing benefits within an LMS involves tracking eligibility, enrollment, usage, and ensuring compliance with relevant regulations.</p></br>
+
+			<li><b>Employee Table</b></li>
+
+				<p>Employee Table:The employee entity represents individuals who are part of the workforce within the organization. It contains essential information about each employee, such as their personal details, job role, department, contact information, and employment history. Effective management of employee data facilitates tasks like payroll processing, performance evaluations, and resource allocation.</p></br>
+
+			<li><b>Leave_Request Table</b></li>
+
+				<p>Leave_Request Table:This entity manages the process of employees requesting time off from work for various reasons, such as vacation, illness, or personal matters. Leave requests typically include details such as the requested dates, type of leave (e.g., paid or unpaid), reason for the absence, and any supporting documentation. Automating the leave request process within an LMS streamlines approvals, ensures staffing coverage, and maintains accurate leave balances for employees.</p></br>
+
+			<li><b>Payroll Table</b></li>
+
+				<p>Payroll Table:The payroll entity encompasses the calculation and distribution of employee compensation, including wages, salaries, bonuses, and deductions. It involves processing attendance records, calculating hours worked, applying appropriate pay rates, and deducting taxes and other withholdings. Integrating payroll functionality into an LMS enables seamless synchronization of attendance data and ensures timely and accurate payment to employees.</p></br>
+
+			<li><b>Performance Table</b></li>
+
+				<p>Performance Table:This involves tracking, evaluating, and improving employee performance. LMS systems often include tools for setting performance goals, conducting performance reviews, and providing feedback to employees. Performance data collected within the system helps identify areas for improvement and informs decisions related to promotions, rewards, or disciplinary actions.s</p></br>
+
+			<li><b>Training Table</b></li>
+
+				<p>Training Table:This aspect focuses on planning, delivering, and tracking employee training programs. LMS platforms facilitate the creation and management of training materials, courses, and curricula. They also provide features for scheduling training sessions, monitoring attendance, and assessing training effectiveness. By centralizing training activities within the system, organizations can ensure that employees receive the necessary skills and knowledge to perform their jobs effectively.</p></br>
+
+
+	
+		       <h2><u><li>ATTRIBUTES</li></u></h2>
+
+		 <b><u>Attributes of Attendance Table</b></br></u>
+       
+<ol type="i">
+   
+
+    <li><p><b><i>Attendance_Id-Primary key:</i></b></li> Unique identifier for each attendance record, saving as the primary key for the table.</br></p> 
+
+    <li><p><b><i>Employee_Id (Foreign key):</i></b></li> Links to the Employee_Id in the Employees table, establishing a relationship between attendance records and employee details.</br></p>
+
+    <li><p><b><i>Date (DATE):</i></b></li> Represents the date on which the attendance was recorded.</br></p> 
+
+    <li><p><b><i>Clock_In_Time (TIME):</i></b></li> Indicates the time when an employee starts their work or clocks in.</br></p>  
+
+    <li><p><b><i>Clock_Out_Time (TIME):</i></b></li> Represents the time when an employee finishes their work or clocks out.</br></p>
+
+    <li><p><b><i>Total_Hours (int):</i></b></li> Stores the total number of hours an employee worked for the given date, calculated as the difference between Clock_Out_Time and Clock_In_Time. It is typically stored as an integer for simplicity.</br></p></ol>
+
+    <b>Attributes of Benefit Table</b></br>
+
+    <ol type="i">
+   
+
+    <li><p><b><i>Benefit_Id (primary key):</i></b></li> A unique identifier for each benefit record, serving as the primary key for the table.</br></p> 
+
+    <li><p><b><i>Employee_id (foreign key):</i></b></li> Links to the Employee_Id in the Employees table, establishing a relationship between employee details and their benefits.</br></p>
+
+    <li><p><b><i>Health_Insurance (varchar):</i></b></li> Describes the type or details of health insurance coverage provided to the employee. It is stored as a variable character (VARCHAR) data type.</br></p> 
+
+    <li><p><b><i>Retirement_Plans (varchar):</i></b></li> Specifies information about retirement plans offered to the employee</br></p>  
+    <li><p><b><i>Other_Benefits (varchar):</i></b></li> Records additional miscellaneous benefits not covered by health insurance</br></p></ol>
+
+    <b>Attributes of Employee Table</b></br>
+    <ol type="i">
+   
+
+    <li><p><b><i>Employee_Id-Primary key:</i></b></li> A unique identifier for each employee, serving as the primary key for the table.</br></p> 
+
+    <li><p><b><i>First_Name (varchar):</i></b></li> Stores the first name of the employee. It is stored as a variable character (VARCHAR) data type.</br></p>
+
+    <li><p><b><i>Last_Name (varchar):</i></b></li> Contains the last name of the employee. It is stored as a variable character (VARCHAR) data type.</br></p> 
+
+    <li><p><b><i>Date_Of_Birth (Date):</i></b></li> Represents the birthdate of the employee.</br></p>  
+
+    <li><p><b><i>Position (varchar):</i></b></li>Describes the job title or position held by the employee within the organization.</br></p>
+
+    <li><p><b><i>Department (Varchar): </i></b></li>Specifies the department or functional area to which the employee belongs.</br></p>
+
+    <li><p><b><i>Contact_Information (varchar):</i></b></li>Includes various contact details for the employee, such as phone number or email address.</br></p></ol>
+
+    <b>Attributes of Leave_Request Table</b></br>
+    <ol type="i">
+   
+
+    <li><p><b><i>Request_Id-Primary key:</i></b></li>:A unique identifier for each leave request, serving as the primary key for the table.</br></p> 
+
+    <li><p><b><i>Employee_Id (Foreign key): </i></b></li> Links to the Employee_Id in the Employees table, establishing a relationship between leave requests and employee details.</br></p>
+
+    <li><p><b><i>Leave_Type (varchar):</i></b></li> Indicates the type of leave requested, such as vacation, sick leave, or personal leave.</br></p> 
+
+    <li><p><b><i>Start_Date (Date):</i></b></li> Represents the starting date of the requested leave.</br></p>  
+
+    <li><p><b><i>End_Date (Date):</i></b></li> Represents the ending date of the requested leave.</br></p>
+
+    <li><p><b><i>Status (varchar):</i></b></li> Describes the current status of the leave request, which could include values like "Pending," "Approved," or "Rejected."</br></p></ol>
+
+     <b>Attributes of Payroll Table</b></br>
+     <ol type="i">
+   
+
+    <li><p><b><i>Payroll_Id-Primary key:</i></b></li>A unique identifier for each payroll record, serving as the primary key for the table.</br></p> 
+
+    <li><p><b><i>Employee_Id (Foreign key):</i></b></li>Links to the Employee_Id in the Employees table, establishing a relationship between payroll records and employee details.</br></p>
+
+    <li><p><b><i>Salary (Float):</i></b></li> Represents the base salary of the employee, typically stored as a floating-point number to accommodate decimal values.</br></p> 
+
+    <li><p><b><i>Overtime (Time):</i></b></li> Records the amount of overtime worked by the employee. It is stored as a time data type.</br></p>  
+
+    <li><p><b><i>Deductions (Float):</i></b></li> Captures any deductions from the employee's salary</br></p>
+
+    <li><p><b><i>Net_Pay (Float):</i></b></li> Calculates the net pay, which is the remaining amount after deducting any applicable deductions from the total compensation.</br></p></ol>
+
+    <b>Attributes of Performance Table</b></br>
+    <ol type="i">
+   
+
+    <li><p><b><i>Performance_Id-Primary key:</i></b></li>A unique identifier for each performance evaluation record, serving as the primary key for the table.</br></p> 
+
+    <li><p><b><i>Employee_Id (Foreign key):</i></b></li> Links to the Employee_Id in the Employees table, establishing a relationship between performance evaluations and employee details.</br></p>
+
+    <li><p><b><i>Evaluation_Period (Date):</i></b></li> Represents the period during which the performance evaluation took place, typically recorded as a date.</br></p> 
+
+    <li><p><b><i>Key_Performance_Indicator (varchar):</i></b></li>Specifies the key performance indicators or criteria used to assess the employee's performance.</br></p>  
+
+    <li><p><b><i>Rating (int):</i></b></li> Assigns a numerical or categorical rating to the employee's performance based on the defined key performance indicators. It is stored as an integer.</br></p>
+
+    <li><p><b><i>Comments (varchar):</i></b></li> Provides additional comments or feedback on the employee's performance.</br></p></ol>
+
+    <b>Attributes of Training Table</b></br>
+    <ol type="i">
+   
+
+    <li><p><b><i>Training_Id-Primary key:</i></b></li> This attribute serves as the primary key for the table, ensuring a unique identifier for each training record. It is typically an auto-incrementing numerical value assigned to uniquely identifier each training entry.</br></p> 
+
+    <li><p><b><i>Employee_Id (Foreign key):</i></b></li>  This attribute is a foreign key linked to the Employee table, establishing a relationship between the training record and the employee undergoing the training.</br></p>
+
+    <li><p><b><i>Training_Type (varchar): </i></b></li> This attribute represents the type or category of the training provided.</br></p> 
+
+    <li><p><b><i>Trainers (varchar): </i></b></li>This attribute stores information about the trainers or instructors responsible for conducting the training.</br></p>  
+
+    <li><p><b><i>Duration (varchar): </i></b> This attribute denotes the duration of the training, expressing the amount of time it takes to complete the training program.</br></p>
+
+    <li><p><b><i>Completion_Status (varchar): </i></b></li>This attribute, though not fully specified in the provided information, appears to represent the status of training completion for a given employee.</br></p></ol>
+
+        
+        </ul>
+		<h2><li><u>JAVA</u></li></h2>
+        <ul type="square"><h3><u><i><li>Description</li></i></u></h3>
+
+            <b><u>INTRODUCTION</b></u>
+
+ <p> In this chapter I will be describing how powerful general purpose programming language was used to create the analyzed system. Under this chapter I will undergo full detail of how everything will function together with database that have been describe above and how it cope with full analyzed system.</p><br>
+ 
+    <b>Tools used to develop this system in java programming</b><br>
+   
+
+<li><p><b>Eclipse IDE:</b></li> an integrated development environment used in computer programming. It contains a base workspace and an extensible plug-in system for customizing the environment. It is the second-most-popular IDE for Java development, and was the most popular. </p><br>
+
+<li><p><b>JAR stands for Java Archive:</b></li>  It's a file format based on the popular ZIP file format and is used for aggregating many files into one. Although JAR can be used as a general archiving tool, the primary motivation for its development was so that Java applets and their requisite components.<br></p> 
+
+</p><br><img src="All pictures/form.png" width=800 height=150><br><br><br><br><br>
+
+<P><b><i>A Labor Management System (LMS) implemented in Java: </i></b>Java is a software solution designed to streamline and automate various aspects of labor-related tasks within an organization. The system typically involves the management of employee information, scheduling, attendance tracking, and possibly other HR-related functions.</br></p>
+
+                <b><u>Labor Management System Project in Java facilitate in:</b></u>
+
+                <ol type="a">
+
+                <li><p><b><i>Employee Management: </i></b>Store and manage employee information such as personal details, contact information, and job-related details. Track employee roles, skills, and qualifications.</br></p></li>
+
+                <li><p><b><i>Attendance Tracking: </i></b>Capture and record employee attendance through manual entry or integration with time and attendance devices. Generate reports on attendance patterns and trends.</br></p></li>
+
+                <li><p><b><i>Scheduling: </i></b>Create and manage work schedules for employees based on their roles and availability. Handle shift assignments, rotations, and manage overtime.</br></p></li>
+
+                <li><p><b><i>Leave Management: </i></b>Allow employees to request and manage leaves. Provide approval workflows for supervisors and managers.</br></p></li>
+
+                <li><p><b><i>Payroll Integration:  </i></b>Integrate with payroll systems to ensure accurate compensation based on attendance and work hours.</br></p></li>
+
+                <li><p><b><i>Reporting and Analytics:  </i></b>Generate reports on employee performance, attendance, and other relevant metrics. Provide analytics to identify trends and areas for improvement.</br></p></li>
+
+                <li><p><b><i>User Authentication and Authorization:   </i></b>Implement secure user authentication to ensure only authorized personnel access sensitive information.</br></p></li>
+
+                <li><p><b><i>Notifications and Alerts:    </i></b>ISend notifications for upcoming shifts, leave approvals, or other relevant events. Alert administrators about potential issues or discrepancies.</br></p></li></ol>
+
+                <b><u>SPECIFIC PURPOSE:</b></u>
+
+                <ol type="i">
+
+                <p>The specific purpose of a Labor Management System in Java is to enhance the efficiency and accuracy of workforce management processes. The system aims to:</br></p>
+
+                <li><p><b><i>Optimize Workforce Productivity:  </i></b>Streamline scheduling, attendance tracking, and leave management to ensure the right personnel are available at the right time.</br></p></li>
+
+                <li><p><b><i>Ensure Compliance:  </i></b>Assist in maintaining compliance with labor laws and company policies by automating timekeeping and leave processes.</br></p></li>
+
+                <li><p><b><i>Improve Decision-Making:  </i></b>Provide insightful reports and analytics to help management make informed decisions about resource allocation, performance, and workforce planning.</br></p></li>
+
+                <li><p><b><i>Enhance Employee Satisfaction:   </i></b>IEnable employees to have transparent access to their schedules, leave balances, and other relevant information, contributing to overall job satisfaction.</br></p></li>
+
+                <li><p><b><i>Reduce Administrative Burden:   </i></b>Automate routine administrative tasks, such as data entry and attendance tracking, to free up time for HR professionals and managers to focus on strategic initiatives.</br></p></li>
+
+                <li><p><b><i>In summary, </i></b>a Java-based Labor Management System serves as a comprehensive solution to efficiently manage and optimize the workforce within an organization, contributing to improved operational efficiency and employee satisfaction.</br></p></li></ol>
+
+
+
+
+
+
+
+
+
+			              <h3><u><i><li>FORMS AND IT'S IMAGES</li></i></u></h3>
+        
+    <b>attendance form</b></br>
+	<img src="All pictures/attendance.png"width=900 height=300><br><br><br><br>
+    <b>benefit form</b></br>
+    <img src="All pictures/benefit.png"width=900 height=300><br><br><br><br>
+    <b>employee form</b></br>
+    <img src="All pictures/employee.png"width=900 height=300><br><br><br><br>
+    <b>request form</b></br>
+    <img src="All pictures/request.png"width=900 height=300><br><br><br><br>
+    <b>payroll form</b></br>
+    <img src="All pictures/payroll.png"width=900 height=300><br><br><br><br>
+    <b>performance form</b></br>
+    <img src="All pictures/performance.png"width=900 height=300><br><br><br><br>
+    <b>training  form</b></br>
+    <img src="All pictures/training.png"width=900 height=300><br><br><br><br>
+
+
+
+       </ul>
+        
+    </ol>
+	<marquee><u><i><h1 style="color: yellow;">Prepared By</i></u>:   MAURICE NIZEYIMANA_222012402</h1></marquee>
+    </body>
+	</html>
